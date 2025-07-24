@@ -17,7 +17,7 @@ class Presences:
     def get_private_presence(self, presences):
         for presence in presences:
             if presence['puuid'] == self.Requests.puuid:
-                #preventing vry from crashing when lol is open
+                #preventing avt from crashing when lol is open
                 # print(presence)
                 # print(presence.get("championId"))
                 if presence.get("championId") is not None or presence.get("product") == "league_of_legends":

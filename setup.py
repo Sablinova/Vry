@@ -25,7 +25,7 @@ build_exe_options = {
 setup(
     name = "Astalavista Valorant Tracker",
     version = version,
-    description='vRY - Astalavista Valorant Tracker',
-    executables = [Executable("main.py", icon="./assets/Logo.ico", target_name="vry.exe")],
+    description='aVT - Astalavista Valorant Tracker',
+    executables = [Executable("main.py", icon="./assets/Logo.ico", target_name="avt.exe")],
     options={"build_exe": build_exe_options}
 )

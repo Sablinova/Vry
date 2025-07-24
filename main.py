@@ -73,7 +73,7 @@ try:
         if len(sys.argv) > 1 and sys.argv[1] == "--config":
             configure()
             run_app = inquirer.confirm(
-                message="Do you want to run vRY now?", default=True
+                message="Do you want to run aVT now?", default=True
             ).execute()
             if run_app:
                 os.system("cls")

@@ -36,7 +36,7 @@
 1) Download [Microsoft Visual C++ Libraries](https://github.com/abbodi1406/vcredist/releases)
 2) Download the [release](https://github.com/isaacKenyon/valorant-rank-yoinker/releases/latest).
 3) Extract **all** files.
-4) Run vRY.exe.
+4) Run aVT.exe.
 
 ### Running from source:
 
@@ -49,11 +49,11 @@
 
 1) `pip install cx_Freeze`
 2) `python setup.py build`
-3)  Open the new Build folder and find vRY.exe.
+3)  Open the new Build folder and find aVT.exe.
 
-> `-` You can change the desired weapon by editing the gun in `config.json`, or by deleting the file for vRY re-prompt you.
+> `-` You can change the desired weapon by editing the gun in `config.json`, or by deleting the file for aVT re-prompt you.
 
-> `-` View all skins: <https://vry.netlify.app/matchLoadouts>.
+> `-` View all skins: <https://avt.netlify.app/matchLoadouts>.
 
 ### Letting Github Build It:
 
@@ -65,14 +65,14 @@ select a particular workflow run, and it should have an artifact available for d
 If you want to make a small change to the application, you can:
 1) [Fork](https://github.com/isaacKenyon/VALORANT-rank-yoinker/fork) this project.
 2) Change the code in your forked repository.
-3) Let the Github Actions workflow build vRY.exe for you.
+3) Let the Github Actions workflow build aVT.exe for you.
 4) Download it and test it.
 5) Submit a Pull Request if you would like your change included in future releases.
 
 ## What about that Tweet?
 
  The [Tweet](https://twitter.com/PlayVALORANT/status/1539728676815642624), which details Riot's API policies, outlines how
- applications are not allowed to expose data hidden by the game client. As of Version 1.262, vRY respects streamer mode.
+ applications are not allowed to expose data hidden by the game client. As of Version 1.262, aVT respects streamer mode.
 
 ## Contributing
 

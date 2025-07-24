@@ -17,11 +17,11 @@ class AccountConfig:
 
     def load_accounts_config(self):
         try:
-            os.mkdir(os.path.join(os.getenv('APPDATA'), "vry"))
+            os.mkdir(os.path.join(os.getenv('APPDATA'), "avt"))
         except FileExistsError:
             pass
         try:
-            with open(os.path.join(os.getenv('APPDATA'), "vry/accounts.json"), "r") as f:
+            with open(os.path.join(os.getenv('APPDATA'), "avt/accounts.json"), "r") as f:
                 self.accounts_data = json.load(f)
         except (FileNotFoundError, json.decoder.JSONDecodeError):
             self.accounts_data = {}
@@ -143,14 +143,14 @@ class AccountConfig:
         }
         updated_data[authdata.get("cookies").get("sub")].update(cookies_dict)
         self.accounts_data.update(updated_data)
-        with open(os.path.join(os.getenv('APPDATA'), "vry/accounts.json"), "w") as f:
+        with open(os.path.join(os.getenv('APPDATA'), "avt/accounts.json"), "w") as f:
             json.dump(self.accounts_data, f)
         return updated_data
 
     def remove_account(self, puuid):
         self.load_accounts_config()
         del self.accounts_data[puuid]
-        with open(os.path.join(os.getenv('APPDATA'), "vry/accounts.json"), "w") as f:
+        with open(os.path.join(os.getenv('APPDATA'), "avt/accounts.json"), "w") as f:
             json.dump(self.accounts_data, f)
         
     def add_account_with_client(self):

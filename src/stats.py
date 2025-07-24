@@ -7,13 +7,13 @@ class Stats:
         pass
 
     def save_data(self, data):
-        # path = os.path.join(os.getenv('APPDATA'), R'vry\stats.json')
+        # path = os.path.join(os.getenv('APPDATA'), R'avt\stats.json')
         try:
-            os.mkdir(os.path.join(os.getenv('APPDATA'), "vry"))
+            os.mkdir(os.path.join(os.getenv('APPDATA'), "avt"))
         except FileExistsError:
             pass
         try:
-            with open(os.path.join(os.getenv('APPDATA'), "vry/stats.json"), "r") as f:
+            with open(os.path.join(os.getenv('APPDATA'), "avt/stats.json"), "r") as f:
                 original_data = json.load(f)
         except (FileNotFoundError, json.decoder.JSONDecodeError):
             original_data = {}
@@ -28,12 +28,12 @@ class Stats:
         # updated_data.update(data)
         # print(updated_data)
 
-        with open(os.path.join(os.getenv('APPDATA'), "vry/stats.json"), "w") as f:
+        with open(os.path.join(os.getenv('APPDATA'), "avt/stats.json"), "w") as f:
             json.dump(updated_data, f)
     
     def read_data(self):
         try:
-            with open(os.path.join(os.getenv('APPDATA'), "vry/stats.json"), "r") as f:
+            with open(os.path.join(os.getenv('APPDATA'), "avt/stats.json"), "r") as f:
                 return json.load(f)
         except (FileNotFoundError, json.decoder.JSONDecodeError):
             return {}
