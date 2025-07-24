@@ -23,9 +23,9 @@ build_exe_options = {
 }
 
 setup(
-    name = "VALORANT rank yoinker",
+    name = "Astalavista Valorant Tracker",
     version = version,
-    description='vRY - VALORANT rank yoinker',
+    description='vRY - Astalavista Valorant Tracker',
     executables = [Executable("main.py", icon="./assets/Logo.ico", target_name="vry.exe")],
     options={"build_exe": build_exe_options}
 )

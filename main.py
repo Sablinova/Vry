@@ -40,7 +40,7 @@ from src.account_manager.account_auth import AccountAuth
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-os.system(f"title VALORANT rank yoinker v{version}")
+os.system(f"title Astalavista Valorant Tracker v{version}")
 
 
 def program_exit(status: int):  # so we don't need to import the entire sys module
@@ -139,7 +139,7 @@ try:
     # asyncio.set_event_loop(loop)
     # loop.run_forever()
 
-    log(f"VALORANT rank yoinker v{version}")
+    log(f"Astalavista Valorant Tracker v{version}")
 
     valoApiSkins = requests.get("https://valorant-api.com/v1/weapons/skins")
     gameContent = content.get_content()
@@ -147,14 +147,8 @@ try:
     previousSeasonID = content.get_previous_season_id(gameContent)
     lastGameState = ""
 
-    print("\nvRY Mobile", color(f"- {get_ip()}:{cfg.port}", fore=(255, 127, 80)))
+    print("\Mobile connect", color(f"- {get_ip()}:{cfg.port}", fore=(255, 127, 80)))
 
-    print(
-        color(
-            "\nVisit https://vry.netlify.app/matchLoadouts to view full player inventories\n",
-            fore=(255, 253, 205),
-        )
-    )
 
     richConsole = RichConsole()
 
@@ -977,12 +971,12 @@ try:
                     and not cfg.get_feature_flag("aggregate_rank_rr"),
                 )
 
-                table.set_caption(f"VALORANT rank yoinker v{version}")
+                table.set_caption(f"Astalavista Valorant Tracker v{version}")
                 Server.send_payload("heartbeat", heartbeat_data)
                 table.display()
                 firstPrint = False
 
-                # print(f"VALORANT rank yoinker v{version}")
+                # print(f"Astalavista Valorant Tracker v{version}")
                 if cfg.get_feature_flag("last_played"):
                     if len(already_played_with) > 0:
                         print("\n")
